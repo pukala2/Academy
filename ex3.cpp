@@ -7,10 +7,7 @@ public:
     {
     }
     
-    int sum() const // const w metodach oznacza to, że gwarantujesz nie zmieniać wartości klasy
-    {
-        return firstValue + secondValue;
-    }
+    int sum() const; // const w metodach oznacza to, że gwarantujesz nie zmieniać wartości klasy
     
 private:
     int firstValue;
@@ -23,4 +20,9 @@ int main()
     const auto result = calculator.sum(); // zmienna auto c++ 11
     
     std::cout << result << std::endl;
+}
+
+int Calculator::sum() const 
+{
+    return firstValue + secondValue;
 }
